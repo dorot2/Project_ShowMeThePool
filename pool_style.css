@@ -6,44 +6,57 @@ html {
 }
 
 body {
-    /*x축 스크롤을 없앤다.*/
     overflow-x: hidden;
-    /* 글 간격을 5%줄인다.*/
     letter-spacing: -0.05em;
 }
+
 a {
     color: black;
     text-decoration: none;
 }
 
+
 h2 {
-    font-size : 32px;
+    font-size : 25px;
     padding : 10px;
-    margin-right : 10px;
     background-color: wheat;
     border-top-left-radius: 32px;
-    height : 40px;
+    height : 35px;
 }
 
-.all-nav {
-    position : fixed;
-    width: 100%;
-    top : 0;
+footer {
+    display: flex;
+    justify-content : left;
+    align-items: center;
+
+    width : 100%;
+    height : 90px;
+    margin: 0 auto;
+    padding : 10px;
+
+    background-color: rgb(0, 0, 40);
+    color : white;     
+    
 }
 
 .top-nav {
-    /*크기나 위치 설정*/
+    position: absolute;
     width: 100%;
-    height: 30px;
+    height: 27px;
+    left: 0;
+    top : 0;
+
     background-color: gray;
     color : whitesmoke;
     opacity: 0.85;
-    line-height : 30px;
 }
 .main-nav {
-    /*크기나 위치 설정*/
+    position: absolute;
     width: 100%;
     height: 52px;
+    left: 0;
+    top : 28px;
+
     background-color: white;
     opacity: 0.85;
 }
@@ -125,18 +138,50 @@ h2 {
 
 .section0-message
 {
+    opacity: 0;
     font-size: 3rem;
     font-weight: bold;
 }
 
 .sticky-element
 {
+    display: none;
     position: fixed;
+
     width: 100%;
-    height: 1rem;
-    top: 8em;
+    height: 6rem;
+    top: 6em;
+
     text-align: center;
+    
 }
+
+#show-section0 .sticky-element
+{
+    display: block;
+}
+
+.main-nav-sticky .main-nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    border: 1px solid gray;
+
+    -webkit-backdrop-filter: saturate(180%) blur(15px);
+	-moz-backdrop-filter: saturate(180%) blur(15px);
+	-o-backdrop-filter: saturate(180%) blur(15px);
+	backdrop-filter: saturate(180%) blur(15px);
+
+}
+
+.main-nav-sticky .main-nav-links {
+    border: none;
+}
+
+
+/* --------------------------------------------------*/
+/* section - 1 */
 .nav-num {
     display : flex;
     align-items: top;
@@ -165,14 +210,12 @@ h2 {
 .nav-4 {
     float : left;
 }
-.end {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding : 10px;
-    width : 100%;
-    height : 90px;
-    background-color: rgb(0, 0, 40);
-    color : white;    
+
+
+/* --------------------------------------------------*/
+.now{
+    color : blue;
 }
-
-
+.notyet{
+    color : gray;
+}
