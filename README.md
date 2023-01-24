@@ -1,2 +1,2 @@
 # ShowMeThePool
-my first website project
+프론트 웹페이지 만들기
